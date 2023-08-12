@@ -3,12 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asar&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="build/styles/main.css">
     <title>Base 64</title>
 </head>
 <body>
     <div class="container">
-        <h1>Oi</h1>
+        <form>
+            <h1>Criptografia Base64</h1>
+            <p>Escolha a opção:</p>
+            <input type="radio" name="operacao" id="codificar" value="cod" checked/> 
+            <label for="codificar">Codificar</label>
+            <input type="radio" name="operacao" id="decodificar" value="dec">
+            <label for="decodificar">Decodificar</label>
+            <p>Escreva a mensagem:</p>
+            <textarea id="mensagem"></textarea>
+            <button type="submit">Codificar</button>
+        </form>
     </div>
 </body>
 </html>

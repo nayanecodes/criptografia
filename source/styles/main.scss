@@ -1,5 +1,34 @@
 @use "reset";
+@use "variaveis";
+@use "sass:math";
+
+
+@function pixelParaEm($alvoEmPixel, $contextoEmPixel: 16px) {
+    @return math.div($alvoEmPixel, $contextoEmPixel)+em;
+}
 
 body {
-    background-color: #111;
+    background-color: variaveis.$corFundo;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container {
+    background-color: variaveis.$corPrincipal;
+    margin-top: 10vh;
+    padding: 1.2rem;
+    border-radius: .4rem;
+    width: 100%;
+    max-width: 400px;
+    form {
+        color: variaveis.$corTexto;
+        h1 {
+            font-size: pixelParaEm(20px);
+            text-align: center;
+            font-weight: normal;
+            margin: .5rem 0;
+        }
+       
+    }
 }
